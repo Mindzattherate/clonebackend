@@ -1,23 +1,49 @@
+// module.exports = (sequelize, Sequelize) => {
+//     const tbl_patientDetails = sequelize.define("tbl_patientDetails", {
+//         patient_Id: {
+//             type: Sequelize.INTEGER,
+//             autoIncrement: true,
+//             primaryKey: true
+//         },
+//         patient_Name: {
+//             type : Sequelize.STRING
+//         },
+//         patient_Age: {
+//             type : Sequelize.INTEGER
+//         },
+//         medical_Issue: {
+//             type: Sequelize.STRING
+//         },
+//         medical_History: {
+//             type: Sequelize.STRING
+//         },
+//         state: {
+//             type: Sequelize.STRING
+//         },
+//         phone_Number: {
+//             type: Sequelize.STRING
+//         },
+//         email: {
+//             type: Sequelize.STRING
+//         }
+//     });
+//     return tbl_patientDetails;
+// }
+
 module.exports = (sequelize, Sequelize) => {
-    const tbl_patientDetails = sequelize.define("tbl_patientDetails", {
-        patient_Id: {
+    const tbl_user_details = sequelize.define("tbl_user_details", {
+        user_Id: {
             type: Sequelize.INTEGER,
             autoIncrement: true,
             primaryKey: true
         },
-        patient_Name: {
+        user_Name: {
             type : Sequelize.STRING
         },
-        patient_Age: {
+        user_Age: {
             type : Sequelize.INTEGER
         },
-        medical_Issue: {
-            type: Sequelize.STRING
-        },
-        medical_History: {
-            type: Sequelize.STRING
-        },
-        state: {
+        password: {
             type: Sequelize.STRING
         },
         phone_Number: {
@@ -27,5 +53,5 @@ module.exports = (sequelize, Sequelize) => {
             type: Sequelize.STRING
         }
     });
-    return tbl_patientDetails;
+    return tbl_user_details;
 }

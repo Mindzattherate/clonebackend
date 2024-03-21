@@ -33,3 +33,24 @@ exports.createPatient_Details = async (req, res) => {
         return res.status(500).send({ code: 500, message: error.message || "Server Error" })
     }
 }
+
+exports.create_User = async (req, res) => {
+    try {
+        const {
+            user_name,
+            email_id,
+            phone_Number,
+            password,
+        } = req.body
+        const createData = await tbl_.create({
+            user_name,
+            email_id,
+            phone_Number,
+            password,
+        })
+        return res.status(200).send({ code: 200, message: "User Created Successfully", data: createData })
+    } catch (error) {
+        console.log("Error", error);
+        return res.status(500).send({ code: 500, message: error.message || "Server Error" })
+    }
+}

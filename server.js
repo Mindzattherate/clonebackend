@@ -48,6 +48,9 @@ const corsOpts = {
 
 
 require('./APIs/login/route/route')(app);
+require('./APIs/country/routes/countryroutes')(app);
+require('./APIs/state/routes/stateRoutes')(app);
+require('./APIs/city/route/cityRoute')(app);
 
 //================== Server ==================//
 
